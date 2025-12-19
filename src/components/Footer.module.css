@@ -1,0 +1,11 @@
+.footer {
+  background-color: rgb(31 41 55); /* bg-gray-800 */
+  color: white;
+  padding: 1rem 0; /* py-4 */
+}
+
+.container {
+  max-width: 1280px; /* container */
+  margin: 0 auto; /* mx-auto */
+  text-align: center;
+}

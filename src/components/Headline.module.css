@@ -1,0 +1,14 @@
+.heading {
+  max-width: 20rem; /* max-w-xs */
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 600; /* font-semibold */
+  line-height: 2.5rem; /* leading-10 */
+  letter-spacing: -0.025em; /* tracking-tight */
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .heading {
+    color: rgb(250 250 249); /* dark:text-zinc-50 */
+  }
+}

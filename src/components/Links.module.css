@@ -1,0 +1,23 @@
+.description {
+  max-width: 28rem; /* max-w-md */
+  font-size: 1.125rem; /* text-lg */
+  line-height: 2rem; /* leading-8 */
+  color: rgb(82 82 91); /* text-zinc-600 */
+}
+
+@media (prefers-color-scheme: dark) {
+  .description {
+    color: rgb(161 161 170); /* dark:text-zinc-400 */
+  }
+}
+
+.link {
+  font-weight: 500; /* font-medium */
+  color: rgb(9 9 11); /* text-zinc-950 */
+}
+
+@media (prefers-color-scheme: dark) {
+  .link {
+    color: rgb(250 250 249); /* dark:text-zinc-50 */
+  }
+}

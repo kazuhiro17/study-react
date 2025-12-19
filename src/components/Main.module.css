@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  width: 100%;
+  max-width: 48rem; /* max-w-3xl */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 4rem; /* py-32 px-16 */
+  background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .main {
+    background-color: black;
+  }
+}
+
+@media (min-width: 640px) {
+  .main {
+    align-items: flex-start; /* sm:items-start */
+  }
+}
