@@ -1,4 +1,4 @@
-import styles from "@/components/Headline.module.css";
+import styles from "@/components/Headline/Headline.module.css";
 
 export function Headline(props: { page: string; children: React.ReactNode }) {
   return (

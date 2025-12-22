@@ -1,6 +1,6 @@
-import { Links } from "@/components/Links";
 import { Headline } from "@/components/Headline";
-import styles from "@/components/Main.module.css";
+import { Links } from "@/components/Links";
+import styles from "@/components/Main/Main.module.css";
 
 export function Main(props: { page: string }) {
   return (
