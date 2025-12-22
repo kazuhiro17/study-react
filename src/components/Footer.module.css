@@ -1,7 +1,8 @@
 .footer {
+  margin-top: auto;
+  padding-block: 0.5rem;
   background-color: rgb(31 41 55); /* bg-gray-800 */
   color: white;
-  padding: 1rem 0; /* py-4 */
 }
 
 .container {

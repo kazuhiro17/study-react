@@ -1,12 +1,7 @@
 .main {
-  display: flex;
-  width: 100%;
-  max-width: 48rem; /* max-w-3xl */
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8rem 4rem; /* py-32 px-16 */
-  background-color: white;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 48rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +12,6 @@
 
 @media (min-width: 640px) {
   .main {
-    align-items: flex-start; /* sm:items-start */
+    width: 100%;
   }
 }
