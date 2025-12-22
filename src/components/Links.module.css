@@ -1,8 +1,43 @@
+.list {
+  margin-top: 2rem;
+  padding: initial;
+  max-width: 26rem;
+  list-style: none;
+}
+
+.item + .item {
+  margin-top: 1rem;
+}
+
+.link {
+  padding: 1rem;
+  display: block;
+  color: rgb(9 9 11); /* text-zinc-950 */
+  border: 1px solid #e7e7e7;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  .link {
+    color: rgb(250 250 249); /* dark:text-zinc-50 */
+  }
+}
+
+@media (any-hover: hover) {
+  .link:hover {
+    border-color: #0070f3;
+  }
+}
+
+.title {
+  font-size: 1.2rem;
+}
+
 .description {
-  max-width: 28rem; /* max-w-md */
-  font-size: 1.125rem; /* text-lg */
-  line-height: 2rem; /* leading-8 */
-  color: rgb(82 82 91); /* text-zinc-600 */
+  font-size: 1rem;
+  color: rgb(82 82 91);
+  transition: color 0.3s ease-out;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,13 +46,8 @@
   }
 }
 
-.link {
-  font-weight: 500; /* font-medium */
-  color: rgb(9 9 11); /* text-zinc-950 */
-}
-
-@media (prefers-color-scheme: dark) {
-  .link {
-    color: rgb(250 250 249); /* dark:text-zinc-50 */
+@media (any-hover: hover) {
+  .link:hover .description {
+    color: #0070f3;
   }
 }
