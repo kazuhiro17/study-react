@@ -18,12 +18,6 @@
   transition: border-color 0.3s ease-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  .link {
-    color: rgb(250 250 249); /* dark:text-zinc-50 */
-  }
-}
-
 @media (any-hover: hover) {
   .link:hover {
     border-color: #0070f3;
@@ -38,12 +32,6 @@
   font-size: 1rem;
   color: rgb(82 82 91);
   transition: color 0.3s ease-out;
-}
-
-@media (prefers-color-scheme: dark) {
-  .description {
-    color: rgb(161 161 170); /* dark:text-zinc-400 */
-  }
 }
 
 @media (any-hover: hover) {
