@@ -1,0 +1,8 @@
+.heading {
+  text-align: center;
+}
+
+.button {
+  margin-inline: auto;
+  width: fit-content;
+}

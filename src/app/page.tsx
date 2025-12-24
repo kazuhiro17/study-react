@@ -2,6 +2,7 @@
 
 import { Main } from "@/components/Main";
 import { useEffect, useState } from "react";
+import styles from "@/app/page.module.css";
 
 export default function Home() {
 
@@ -23,8 +24,8 @@ export default function Home() {
 
   return (
     <>
-    <h1>{count}</h1>
-      <button onClick={handleClick}>ボタン</button>
+    <h1 className={styles.heading}>{count}</h1>
+      <button className={styles.button} onClick={handleClick}>ボタン</button>
       <Main page="Index" />
     </>
   );
