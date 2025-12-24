@@ -1,28 +1,30 @@
 "use client";
 
 import { Main } from "@/components/Main";
-import { useCallback, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const handleClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
-    console.log((e.target as HTMLAnchorElement).href);
-    e.preventDefault();
-  }, []);
+
+  const [count, setCount] = useState(1);
+
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    setCount (count => count + 1);
+    setCount (count => count + 1);
+  }
 
   useEffect(() => {
-    console.log("マウント時");
     document.body.style.backgroundColor = "lightblue";
     return () => {
-      console.log("アンマウント時");
       document.body.style.backgroundColor = "";
     };
   }, []);
 
+
   return (
     <>
-      <a href="/about" onClick={handleClick}>
-        ボタン
-      </a>
+    <h1>{count}</h1>
+      <button onClick={handleClick}>ボタン</button>
       <Main page="Index" />
     </>
   );
