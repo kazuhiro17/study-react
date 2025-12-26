@@ -9,24 +9,13 @@ export default function Home() {
   const [text, setText] = useState("");
   const [isShow, setIsShow] = useState(true);
 
-  const handleClick = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      if (count < 10) {
-        setCount((count) => count + 1);
-      }
-    },
-    [count]
-  );
+    if (count < 10) {
+      setCount((prevCount) => prevCount + 1);
+    }
+  }, [count]);
 
   const handleDisplay = useCallback(() => {
-    setIsShow((isShow) => !isShow);
-  }, []);
-
-  useEffect(() => {
-    document.body.style.backgroundColor = "lightblue";
-    return () => {
-      document.body.style.backgroundColor = "";
-    };
+    setIsShow((prevIsShow) => !prevIsShow);
   }, []);
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
