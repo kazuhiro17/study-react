@@ -1,26 +1,6 @@
-import { useCallback, useState } from "react";
+import { useSharedState } from "@/contexts/SharedStateContext";
 
 export const useInputArray = () => {
-  const [text, setText] = useState("");
-  const [array, setArray] = useState<string[]>([]);
-
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value.trim().length > 5) {
-      alert("5文字以内にしてください");
-      return;
-    }
-    setText(e.target.value.trim());
-  }, []);
-
-  const handleAdd = useCallback(() => {
-    setArray((prevArray) => {
-      if (prevArray.some((item) => item === text)) {
-        alert("同じ要素が既に存在しています");
-        return prevArray;
-      }
-      return [...prevArray, text];
-    });
-  }, [text]);
-
+  const { text, array, handleChange, handleAdd } = useSharedState();
   return { text, array, handleChange, handleAdd };
 };

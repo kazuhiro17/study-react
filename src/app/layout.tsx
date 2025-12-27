@@ -4,6 +4,7 @@ import "./globals.css";
 import styles from "@/app/layout.module.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SharedStateProvider } from "@/contexts/SharedStateContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,9 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${styles.body}`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <SharedStateProvider>
+          <Header />
+          {children}
+          <Footer />
+        </SharedStateProvider>
       </body>
     </html>
   );
