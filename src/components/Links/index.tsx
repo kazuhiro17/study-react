@@ -1,10 +1,16 @@
 import styles from "@/components/Links/Links.module.css";
 
+type LinkItem = {
+  href: string;
+  title: string;
+  description: string;
+};
+
 export function Links({
   items,
   handleReduce,
 }: {
-  items: any;
+  items: LinkItem[];
   handleReduce: () => void;
 }) {
   return (
