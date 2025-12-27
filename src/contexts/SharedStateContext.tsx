@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  ReactNode,
+} from "react";
 
 // 共有ステートの型定義
 interface SharedStateContextType {
@@ -85,4 +91,3 @@ export function useSharedState() {
   }
   return context;
 }
-
