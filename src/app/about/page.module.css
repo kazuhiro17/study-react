@@ -1,0 +1,18 @@
+.heading {
+  text-align: center;
+}
+
+.button {
+  margin-inline: auto;
+  width: fit-content;
+}
+
+.input {
+  margin-inline: auto;
+  width: fit-content;
+}
+
+.item {
+  margin-inline: auto;
+  width: fit-content;
+}
