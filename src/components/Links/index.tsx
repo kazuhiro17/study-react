@@ -6,13 +6,13 @@ type LinkItem = {
   description: string;
 };
 
-export function Links({
+export const Links = ({
   items,
   handleReduce,
 }: {
   items: LinkItem[];
   handleReduce: () => void;
-}) {
+}) => {
   return (
     <div className={styles.list}>
       <button onClick={handleReduce}>減らす</button>
@@ -26,4 +26,4 @@ export function Links({
       ))}
     </div>
   );
-}
+};

@@ -26,7 +26,7 @@ const ITEMS = [
   },
 ];
 
-export function Main(props: { page: string }) {
+export const Main = (props: { page: string }) => {
   const [items, setItems] = useState(ITEMS);
 
   const handleReduce = useCallback(() => {
@@ -43,4 +43,4 @@ export function Main(props: { page: string }) {
       <Links items={items} handleReduce={handleReduce} />
     </main>
   );
-}
+};

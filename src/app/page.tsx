@@ -6,7 +6,12 @@ import { useInputArray } from "@/hooks/useInputArray";
 import { useBgColor } from "@/hooks/useBgColor";
 import styles from "@/app/page.module.css";
 
-export default function Home() {
+type PageProps = {
+  params?: { [key: string]: string | string[] | undefined };
+  searchParams?: { [key: string]: string | string[] | undefined };
+};
+
+const Home = ({ params, searchParams }: PageProps) => {
   const { count, isShow, handleClick, handleDisplay } = useCounter();
   const { text, array, handleChange, handleAdd } = useInputArray();
   useBgColor();
@@ -43,4 +48,6 @@ export default function Home() {
       <Main page="Index" />
     </>
   );
-}
+};
+
+export default Home;

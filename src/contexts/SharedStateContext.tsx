@@ -30,7 +30,7 @@ const SharedStateContext = createContext<SharedStateContextType | undefined>(
 );
 
 // Providerコンポーネント
-export function SharedStateProvider({ children }: { children: ReactNode }) {
+export const SharedStateProvider = ({ children }: { children: ReactNode }) => {
   // Counter関連のステート
   const [count, setCount] = useState(1);
   const [isShow, setIsShow] = useState(true);
@@ -61,7 +61,7 @@ export function SharedStateProvider({ children }: { children: ReactNode }) {
 
   const handleAdd = useCallback(() => {
     setArray((prevArray) => {
-      if (prevArray.some((item) => item === text)) {
+      if (prevArray.includes(text)) {
         alert("同じ要素が既に存在しています");
         return prevArray;
       }
@@ -86,13 +86,13 @@ export function SharedStateProvider({ children }: { children: ReactNode }) {
       {children}
     </SharedStateContext.Provider>
   );
-}
+};
 
 // カスタムフック：Contextを使用するためのヘルパー
-export function useSharedState() {
+export const useSharedState = () => {
   const context = useContext(SharedStateContext);
   if (context === undefined) {
     throw new Error("useSharedState must be used within a SharedStateProvider");
   }
   return context;
-}
+};
