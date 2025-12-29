@@ -7,13 +7,13 @@ import { useBgLightblue } from "@/hooks/useBgLightblue";
 import styles from "@/app/page.module.css";
 
 export default function About() {
-  const { count, isShow, handleClick, handleDisplay } = useCounter();
+  const { doubleCount, isShow, handleClick, handleDisplay } = useCounter();
   const { text, array, handleChange, handleAdd } = useInputArray();
   useBgLightblue();
 
   return (
     <>
-      {isShow ? <h1 className={styles.heading}>{count}</h1> : null}
+      {isShow ? <h1 className={styles.heading}>{doubleCount}</h1> : null}
       <button className={styles.button} onClick={handleClick}>
         ボタン
       </button>

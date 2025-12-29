@@ -6,12 +6,14 @@ import {
   useState,
   useCallback,
   ReactNode,
+  useMemo,
 } from "react";
 
 // 共有ステートの型定義
 interface SharedStateContextType {
   // Counter関連
   count: number;
+  doubleCount: number;
   isShow: boolean;
   handleClick: () => void;
   handleDisplay: () => void;
@@ -32,6 +34,8 @@ export function SharedStateProvider({ children }: { children: ReactNode }) {
   // Counter関連のステート
   const [count, setCount] = useState(1);
   const [isShow, setIsShow] = useState(true);
+
+  const doubleCount = useMemo(() => count * 2, [count]);
 
   const handleClick = useCallback(() => {
     if (count < 10) {
@@ -67,6 +71,7 @@ export function SharedStateProvider({ children }: { children: ReactNode }) {
 
   const value: SharedStateContextType = {
     count,
+    doubleCount,
     isShow,
     handleClick,
     handleDisplay,
