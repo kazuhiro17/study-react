@@ -3,13 +3,13 @@
 import { Main } from "@/components/Main";
 import { useCounter } from "@/hooks/useCounter";
 import { useInputArray } from "@/hooks/useInputArray";
-import { useBgLightblue } from "@/hooks/useBgLightblue";
+import { useBgColor } from "@/hooks/useBgColor";
 import styles from "@/app/page.module.css";
 
 export default function About() {
   const { doubleCount, isShow, handleClick, handleDisplay } = useCounter();
   const { text, array, handleChange, handleAdd } = useInputArray();
-  useBgLightblue();
+  useBgColor();
 
   return (
     <>
